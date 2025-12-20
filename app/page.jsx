@@ -15,10 +15,10 @@ export default function HomePage() {
 
       {/* HEADER */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 px-6 ${
-          shrink ? "py-2 shadow-md" : "py-3 shadow-sm"
-        } flex items-center justify-between bg-[#fbf7ef] border-b border-[#e8e0d2] transition-all duration-300`}
-      >
+  className={`fixed top-0 left-0 w-full z-50 px-6 ${
+    shrink ? "py-1 shadow-md" : "py-2 shadow-sm"
+  } flex items-center justify-between bg-[#fffaf2]/95 backdrop-blur-md border-b border-[#e8dcc7] transition-all duration-300`}
+>
         <img src="/logo.png" alt="VSD Serrurerie" className="h-12 w-auto" />
 
         <nav className="hidden md:flex items-center space-x-8 text-[#8a6a3a] font-medium">
