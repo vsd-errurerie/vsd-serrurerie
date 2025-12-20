@@ -3,7 +3,7 @@ export default function HomePage() {
     <>
       {/* HERO FIN */}
       <section className="bg-slate-800 text-slate-50">
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Serrurier en Eure-et-Loir (28)
@@ -16,7 +16,7 @@ export default function HomePage() {
 
             <a
               href="tel:0600000000"
-              className="inline-flex items-center gap-2 bg-[#D4A13A] text-slate-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition"
+              className="inline-flex items-center gap-2 bg-[#B87333] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition"
             >
               📞 Appel immédiat
             </a>
@@ -25,7 +25,7 @@ export default function HomePage() {
       </section>
 
       {/* BANDE DE CONFIANCE */}
-      <section className="bg-white border-b">
+      <section className="bg-[#F7F3EE] border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-6 grid md:grid-cols-3 gap-4 text-center">
           <div className="font-semibold text-slate-700">
             ⏱ Intervention rapide
@@ -40,7 +40,7 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-slate-50">
+      <section className="bg-[#F7F3EE]">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <h2 className="text-3xl font-bold text-slate-900 text-center mb-14">
             Nos prestations de serrurerie
@@ -82,7 +82,7 @@ export default function HomePage() {
 
       {/* CTA FINAL */}
       <section className="bg-slate-800 text-slate-50">
-        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
+        <div className="max-w-6xl mx-auto px-6 py-14 text-center">
           <h2 className="text-2xl font-bold mb-4">
             Besoin d’un serrurier immédiatement ?
           </h2>
@@ -91,7 +91,7 @@ export default function HomePage() {
           </p>
           <a
             href="tel:0600000000"
-            className="inline-block bg-[#D4A13A] text-slate-900 font-semibold px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition"
+            className="inline-block bg-[#B87333] text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition"
           >
             📞 Appeler maintenant
           </a>
