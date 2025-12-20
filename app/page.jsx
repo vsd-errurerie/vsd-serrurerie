@@ -23,18 +23,15 @@ export default function HomePage() {
         </span>
 
         <nav className="hidden md:flex space-x-10 text-sm font-medium">
-          {["Dépannage", "Tarifs", "Zones", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="relative group"
-            >
-              <span className="group-hover:text-[#C9A24D] transition">
-                {item}
-              </span>
-              <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#C9A24D] transition-all group-hover:w-full" />
-            </a>
-          ))}
+          <a href="#tarifs" className="hover:text-[#C9A24D] transition">
+            Tarifs
+          </a>
+          <a href="#zones" className="hover:text-[#C9A24D] transition">
+            Zones
+          </a>
+          <a href="#contact" className="hover:text-[#C9A24D] transition">
+            Contact
+          </a>
         </nav>
 
         <a
@@ -47,7 +44,6 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="px-6 pt-16 pb-24 relative overflow-hidden">
-        {/* GOLD GLOW */}
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#C9A24D]/20 rounded-full blur-[120px]" />
 
         <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -87,14 +83,13 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* CARD */}
           <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-[#E5DCCB] hover:shadow-2xl transition">
             <h3 className="text-2xl font-semibold mb-6 text-center">
               Prestations serrurerie
             </h3>
             <ul className="space-y-4 text-base">
-              <li>🔑 Ouverture de porte claquée</li>
-              <li>🔐 Porte verrouillée / serrure HS</li>
+              <li>🔑 Ouverture de porte</li>
+              <li>🔐 Porte verrouillée</li>
               <li>🛡️ Sécurisation après effraction</li>
               <li>🚪 Remplacement de serrure</li>
             </ul>
@@ -103,28 +98,93 @@ export default function HomePage() {
       </section>
 
       {/* TARIFS */}
-      <section id="tarifs" className="py-24 bg-[#FBFAF7] border-t border-[#E5DCCB]">
-        <h2 className="text-3xl font-semibold text-center mb-14">
-          Tarifs transparents
-        </h2>
+      <section
+        id="tarifs"
+        className="py-24 bg-[#FBFAF7] border-t border-[#E5DCCB]"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-semibold text-center mb-4">
+            Tarifs serrurerie
+          </h2>
+          <p className="text-center opacity-75 mb-14 max-w-2xl mx-auto">
+            Tarifs indicatifs communiqués à l’avance.  
+            Devis gratuit – Aucune surprise – Règlement après prestation.
+          </p>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 px-6">
-          {[
-            { title: "Ouverture porte claquée", price: "85€" },
-            { title: "Porte verrouillée", price: "120€" },
-            { title: "Sécurisation après effraction", price: "Sur devis" },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="group bg-[#F6F3ED] rounded-xl p-8 text-center border border-[#E5DCCB] transition hover:-translate-y-2 hover:shadow-xl"
-            >
-              <h3 className="font-medium mb-3">{item.title}</h3>
-              <p className="text-3xl font-bold text-[#C9A24D]">
-                {item.price}
-              </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* OUVERTURE */}
+            <div className="bg-[#F6F3ED] border border-[#E5DCCB] rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold mb-6 text-[#C9A24D]">
+                Ouverture de porte
+              </h3>
+              <ul className="space-y-4 text-sm">
+                <li className="flex justify-between">
+                  <span>Porte simple fermée à clés</span>
+                  <strong>130 € – 150 €</strong>
+                </li>
+                <li className="flex justify-between">
+                  <span>Porte blindée fermée à clés</span>
+                  <strong>150 € – 210 €</strong>
+                </li>
+                <li className="flex justify-between">
+                  <span>Porte simple claquée</span>
+                  <strong>110 € – 130 €</strong>
+                </li>
+                <li className="flex justify-between">
+                  <span>Porte blindée claquée</span>
+                  <strong>150 € – 180 €</strong>
+                </li>
+              </ul>
             </div>
-          ))}
+
+            {/* SERRURES */}
+            <div className="bg-[#F6F3ED] border border-[#E5DCCB] rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold mb-6 text-[#C9A24D]">
+                Fourniture & pose de serrure
+              </h3>
+              <ul className="space-y-4 text-sm">
+                <li className="flex justify-between">
+                  <span>Serrure 1 point</span>
+                  <strong>150 € – 290 €</strong>
+                </li>
+                <li className="flex justify-between">
+                  <span>Serrure 3 points</span>
+                  <strong>290 € – 580 €</strong>
+                </li>
+                <li className="flex justify-between">
+                  <span>Serrure 5 points</span>
+                  <strong>310 € – 690 €</strong>
+                </li>
+                <li className="flex justify-between">
+                  <span>Serrure boîte aux lettres</span>
+                  <strong>110 € – 140 €</strong>
+                </li>
+              </ul>
+            </div>
+
+            {/* SÉCURISATION */}
+            <div className="md:col-span-2 bg-white border border-[#E5DCCB] rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center">
+              <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
+                Mise en sécurité après effraction
+              </h3>
+              <p className="text-sm opacity-80 mb-2">
+                Intervention rapide pour sécuriser votre logement ou local.
+              </p>
+              <strong className="text-lg">Sur devis gratuit</strong>
+            </div>
+          </div>
         </div>
+      </section>
+
+      {/* ZONES */}
+      <section id="zones" className="py-24">
+        <h2 className="text-3xl font-semibold text-center mb-6">
+          Zones d’intervention
+        </h2>
+        <p className="text-center max-w-3xl mx-auto opacity-80 text-sm">
+          Chartres • Lucé • Mainvilliers • Dreux • Châteaudun • Nogent-le-Rotrou •
+          Maintenon • Épernon • et toutes les communes du 28.
+        </p>
       </section>
 
       {/* CONTACT */}
