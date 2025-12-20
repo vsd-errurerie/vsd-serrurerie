@@ -11,204 +11,155 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="pt-20 min-h-screen bg-[#F6F3ED] text-[#1A1A1A]">
-      {/* HEADER */}
+    <div className="pt-20 min-h-screen bg-[#f6f1e8] text-[#1c1c1c]">
+      {/* ================= HEADER ================= */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 px-6 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 px-6 ${
           shrink ? "py-2 shadow-lg" : "py-3"
-        } bg-[#FBFAF7]/90 backdrop-blur-md border-b border-[#E5DCCB] flex items-center justify-between`}
+        } flex items-center justify-between bg-[#0b1220]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300`}
       >
-        <span className="font-semibold tracking-widest text-lg">
-          VSD SERRURERIE
-        </span>
+        {/* LOGO + NOM */}
+        <div className="flex items-center gap-3">
+          <img
+            src="/logo-vsd.png"
+            alt="VSD Serrurerie"
+            className="h-10 w-auto"
+          />
+          <span className="text-lg font-semibold tracking-wide text-white">
+            VSD Serrurerie
+          </span>
+        </div>
 
-        <nav className="hidden md:flex space-x-10 text-sm font-medium">
-          <a href="#tarifs" className="hover:text-[#C9A24D] transition">
+        {/* NAV */}
+        <nav className="hidden md:flex items-center gap-8 text-white/90 font-medium">
+          <a href="#services" className="hover:text-[#d4af37] transition">
+            Dépannage
+          </a>
+          <a href="#tarifs" className="hover:text-[#d4af37] transition">
             Tarifs
           </a>
-          <a href="#zones" className="hover:text-[#C9A24D] transition">
+          <a href="#zones" className="hover:text-[#d4af37] transition">
             Zones
           </a>
-          <a href="#contact" className="hover:text-[#C9A24D] transition">
+          <a href="#contact" className="hover:text-[#d4af37] transition">
             Contact
           </a>
         </nav>
 
+        {/* CTA */}
         <a
           href="tel:0652826311"
-          className="hidden md:inline-block bg-[#C9A24D] text-white px-7 py-2 rounded-md font-semibold transition hover:bg-[#9F7F2E] shadow-[0_0_20px_rgba(201,162,77,0.35)]"
+          className="hidden md:inline-block bg-[#d4af37] text-[#0b1220] py-2 px-6 rounded-lg font-semibold shadow hover:opacity-90 transition"
         >
           📞 06 52 82 63 11
         </a>
       </header>
 
-      {/* HERO */}
-      <section className="px-6 pt-16 pb-24 relative overflow-hidden">
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#C9A24D]/20 rounded-full blur-[120px]" />
+      {/* ================= HERO ================= */}
+      <section className="relative px-6 pt-12 pb-20">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1602080752272-5dfae6bd86c1')] bg-cover bg-center" />
 
-        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Serrurier à Chartres{" "}
-              <span className="text-[#C9A24D]">(28)</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0b1220] mb-6">
+              Serrurier à Chartres & Eure-et-Loir (28)
             </h1>
-
-            <p className="text-lg opacity-85 max-w-xl leading-relaxed">
-              Artisan serrurier diplômé et assuré décennale.  
-              Intervention rapide 24h/24 – 7j/7, ouverture sans dégâts,
-              prix justes et transparents.
+            <p className="text-lg md:text-xl opacity-90 max-w-xl leading-relaxed">
+              Artisan diplômé et assuré décennale. Dépannage serrurerie 24h/24
+              et 7j/7, intervention rapide, ouverture sans dégâts au prix le plus
+              juste.
             </p>
-
-            <div className="grid grid-cols-2 gap-3 mt-8 text-sm font-medium">
-              {[
-                "Devis gratuit",
-                "Paiement après prestation",
-                "Intervention < 30 min",
-                "Disponible 24/7",
-              ].map((t) => (
-                <div
-                  key={t}
-                  className="bg-[#FBFAF7] border border-[#E5DCCB] rounded-lg px-4 py-3 hover:shadow-md transition"
-                >
-                  ✔️ {t}
-                </div>
-              ))}
-            </div>
 
             <a
               href="tel:0652826311"
-              className="inline-block mt-10 bg-[#C9A24D] text-white px-12 py-4 rounded-xl font-semibold transition hover:bg-[#9F7F2E] shadow-[0_10px_30px_rgba(201,162,77,0.35)] hover:scale-[1.03]"
+              className="inline-block mt-8 bg-[#d4af37] text-[#0b1220] py-3 px-8 rounded-xl shadow-lg hover:opacity-90 transition font-semibold"
             >
               📞 Appel immédiat
             </a>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-[#E5DCCB] hover:shadow-2xl transition">
-            <h3 className="text-2xl font-semibold mb-6 text-center">
-              Prestations serrurerie
+          <div className="bg-white/80 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-[#e2d7c5]">
+            <h3 className="text-2xl font-bold text-[#0b1220] mb-4 text-center">
+              Engagements VSD Serrurerie
             </h3>
-            <ul className="space-y-4 text-base">
-              <li>🔑 Ouverture de porte</li>
-              <li>🔐 Porte verrouillée</li>
-              <li>🛡️ Sécurisation après effraction</li>
-              <li>🚪 Remplacement de serrure</li>
+            <ul className="space-y-3 text-[#2a2a2a]">
+              <li>✔️ Artisan diplômé & assuré décennale</li>
+              <li>✔️ Devis gratuit & prix annoncés</li>
+              <li>✔️ Règlement après prestation</li>
+              <li>✔️ Intervention en 30 minutes max</li>
+              <li>✔️ Disponible 24h/24 – 7j/7</li>
+              <li>✔️ Ouverture sans dégâts</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* TARIFS */}
-      <section
-        id="tarifs"
-        className="py-24 bg-[#FBFAF7] border-t border-[#E5DCCB]"
-      >
+      {/* ================= TARIFS ================= */}
+      <section id="tarifs" className="py-16 bg-[#fff8ef] border-t">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold text-center mb-4">
+          <h2 className="text-3xl font-bold text-center mb-10 text-[#0b1220]">
             Tarifs serrurerie
           </h2>
-          <p className="text-center opacity-75 mb-14 max-w-2xl mx-auto">
-            Tarifs indicatifs communiqués à l’avance.  
-            Devis gratuit – Aucune surprise – Règlement après prestation.
-          </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* OUVERTURE */}
-            <div className="bg-[#F6F3ED] border border-[#E5DCCB] rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-              <h3 className="text-xl font-semibold mb-6 text-[#C9A24D]">
-                Ouverture de porte
-              </h3>
-              <ul className="space-y-4 text-sm">
-                <li className="flex justify-between">
-                  <span>Porte simple fermée à clés</span>
-                  <strong>130 € – 150 €</strong>
-                </li>
-                <li className="flex justify-between">
-                  <span>Porte blindée fermée à clés</span>
-                  <strong>150 € – 210 €</strong>
-                </li>
-                <li className="flex justify-between">
-                  <span>Porte simple claquée</span>
-                  <strong>110 € – 130 €</strong>
-                </li>
-                <li className="flex justify-between">
-                  <span>Porte blindée claquée</span>
-                  <strong>150 € – 180 €</strong>
-                </li>
-              </ul>
-            </div>
-
-            {/* SERRURES */}
-            <div className="bg-[#F6F3ED] border border-[#E5DCCB] rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-              <h3 className="text-xl font-semibold mb-6 text-[#C9A24D]">
-                Fourniture & pose de serrure
-              </h3>
-              <ul className="space-y-4 text-sm">
-                <li className="flex justify-between">
-                  <span>Serrure 1 point</span>
-                  <strong>150 € – 290 €</strong>
-                </li>
-                <li className="flex justify-between">
-                  <span>Serrure 3 points</span>
-                  <strong>290 € – 580 €</strong>
-                </li>
-                <li className="flex justify-between">
-                  <span>Serrure 5 points</span>
-                  <strong>310 € – 690 €</strong>
-                </li>
-                <li className="flex justify-between">
-                  <span>Serrure boîte aux lettres</span>
-                  <strong>110 € – 140 €</strong>
-                </li>
-              </ul>
-            </div>
-
-            {/* SÉCURISATION */}
-            <div className="md:col-span-2 bg-white border border-[#E5DCCB] rounded-2xl p-8 shadow-sm hover:shadow-md transition text-center">
-              <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
-                Mise en sécurité après effraction
-              </h3>
-              <p className="text-sm opacity-80 mb-2">
-                Intervention rapide pour sécuriser votre logement ou local.
-              </p>
-              <strong className="text-lg">Sur devis gratuit</strong>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              ["Ouverture porte simple fermée à clés", "130€ – 150€"],
+              ["Ouverture porte blindée fermée à clés", "150€ – 210€"],
+              ["Ouverture porte simple claquée", "110€ – 130€"],
+              ["Ouverture porte blindée claquée", "150€ – 180€"],
+              ["Fourniture & pose serrure 1 point", "150€ – 290€"],
+              ["Fourniture & pose serrure 3 points", "290€ – 580€"],
+              ["Fourniture & pose serrure 5 points", "310€ – 690€"],
+              ["Serrure boîte aux lettres", "110€ – 140€"],
+              ["Mise en sécurité après effraction", "Sur devis"],
+            ].map(([name, price]) => (
+              <div
+                key={name}
+                className="flex justify-between items-center bg-white rounded-xl p-5 shadow border"
+              >
+                <span className="font-medium">{name}</span>
+                <span className="font-bold text-[#d4af37]">{price}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ZONES */}
-      <section id="zones" className="py-24">
-        <h2 className="text-3xl font-semibold text-center mb-6">
-          Zones d’intervention
-        </h2>
-        <p className="text-center max-w-3xl mx-auto opacity-80 text-sm">
-          Chartres • Lucé • Mainvilliers • Dreux • Châteaudun • Nogent-le-Rotrou •
-          Maintenon • Épernon • et toutes les communes du 28.
-        </p>
+      {/* ================= ZONES ================= */}
+      <section id="zones" className="py-16">
+        <div className="max-w-6xl mx-auto text-center px-6">
+          <h2 className="text-3xl font-bold mb-6 text-[#0b1220]">
+            Zones d’intervention
+          </h2>
+          <p className="opacity-80 max-w-3xl mx-auto">
+            Chartres • Lucé • Mainvilliers • Dreux • Nogent-le-Rotrou •
+            Châteaudun • Maintenon • Épernon • et toutes les communes du 28.
+          </p>
+        </div>
       </section>
 
-      {/* CONTACT */}
+      {/* ================= CONTACT ================= */}
       <section
         id="contact"
-        className="py-24 text-center bg-gradient-to-b from-[#F6F3ED] to-[#FBFAF7] border-t border-[#E5DCCB]"
+        className="bg-[#0b1220] text-white py-16 text-center"
       >
-        <h2 className="text-3xl font-semibold mb-6">
-          Urgence serrurier – Intervention immédiate
+        <h2 className="text-3xl font-bold mb-4">
+          🚨 Urgence serrurier – Intervention immédiate
         </h2>
-        <p className="opacity-80 max-w-2xl mx-auto mb-10">
-          Artisan local de confiance · Aucune surprise · Prix justes
+        <p className="opacity-80 max-w-2xl mx-auto mb-8">
+          Appelez VSD Serrurerie pour une intervention rapide et sans surprise.
         </p>
         <a
           href="tel:0652826311"
-          className="bg-[#C9A24D] text-white px-14 py-4 rounded-xl font-semibold transition hover:bg-[#9F7F2E] shadow-[0_10px_40px_rgba(201,162,77,0.45)] hover:scale-[1.05]"
+          className="bg-[#d4af37] text-[#0b1220] py-3 px-10 rounded-xl shadow-lg hover:opacity-90 transition inline-block font-semibold"
         >
           📞 Appeler maintenant
         </a>
       </section>
 
-      {/* FOOTER */}
-      <footer className="text-center py-10 text-xs opacity-70">
-        © 2025 VSD Serrurerie – Artisan serrurier premium à Chartres (28)
+      {/* ================= FOOTER ================= */}
+      <footer className="text-center py-10 text-sm opacity-70">
+        © 2025 VSD Serrurerie – Artisan serrurier à Chartres & Eure-et-Loir
       </footer>
     </div>
   );
