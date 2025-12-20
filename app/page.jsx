@@ -1,99 +1,110 @@
 export default function HomePage() {
   return (
     <>
-      {/* HERO FIN */}
-      <section className="bg-slate-800 text-slate-50">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Serrurier en Eure-et-Loir (28)
-            </h1>
+      {/* BANDEAU ULTRA FIN */}
+      <section className="bg-[#0B2C4D] text-white">
+        <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <h1 className="text-xl md:text-2xl font-bold">
+            Serrurier en Eure-et-Loir (28)
+          </h1>
 
-            <p className="text-slate-200 mb-6">
-              Dépannage serrurerie 24h/24 et 7j/7 •
-              Artisan local de confiance • Intervention rapide
-            </p>
-
-            <a
-              href="tel:0600000000"
-              className="inline-flex items-center gap-2 bg-[#B87333] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition"
-            >
-              📞 Appel immédiat
-            </a>
-          </div>
+          <a
+            href="tel:0600000000"
+            className="inline-flex items-center justify-center bg-[#FF8A00] text-black font-bold px-5 py-2 rounded-md shadow hover:opacity-90 transition"
+          >
+            📞 Dépannage immédiat
+          </a>
         </div>
       </section>
 
-      {/* BANDE DE CONFIANCE */}
-      <section className="bg-[#F7F3EE] border-b border-slate-200">
-        <div className="max-w-6xl mx-auto px-6 py-6 grid md:grid-cols-3 gap-4 text-center">
-          <div className="font-semibold text-slate-700">
-            ⏱ Intervention rapide
-          </div>
-          <div className="font-semibold text-slate-700">
-            🔒 Artisan serrurier local
-          </div>
-          <div className="font-semibold text-slate-700">
-            ⭐ Travail soigné & transparent
-          </div>
+      {/* SOUS-TITRE */}
+      <section className="bg-slate-50">
+        <div className="max-w-4xl mx-auto px-6 py-10 text-center">
+          <p className="text-lg text-slate-700">
+            Dépannage serrurerie 24h/24 et 7j/7 • Intervention rapide • Artisan local
+          </p>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="bg-[#F7F3EE]">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <h2 className="text-3xl font-bold text-slate-900 text-center mb-14">
-            Nos prestations de serrurerie
+      {/* GARANTIES */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="text-2xl font-bold text-center mb-10">
+            Des engagements clairs, sans surprise
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
-              <div className="text-3xl mb-4">🚪</div>
-              <h3 className="text-xl font-semibold mb-3">
-                Ouverture de porte
-              </h3>
+          <div className="grid md:grid-cols-2 gap-6 text-slate-700">
+            <p>✔ Artisan diplômé et assuré en garantie décennale</p>
+            <p>✔ Devis gratuit avant toute intervention</p>
+            <p>✔ Règlement après prestation uniquement</p>
+            <p>✔ Intervention en 30 minutes maximum</p>
+            <p>✔ Disponible 24h/24 et 7j/7</p>
+            <p>✔ Ouverture sans dégâts dans la majorité des cas</p>
+            <p>✔ Prix justes, annoncés à l’avance</p>
+            <p>✔ Aucune mauvaise surprise</p>
+          </div>
+        </div>
+      </section>
+
+      {/* PRESTATIONS */}
+      <section className="bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="text-2xl font-bold text-center mb-12">
+            Prestations de serrurerie
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Ouverture de porte</h3>
               <p className="text-slate-600">
-                Porte claquée ou verrouillée, ouverture rapide sans détérioration.
+                Porte claquée ou verrouillée, ouverture rapide et soignée.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
-              <div className="text-3xl mb-4">🔑</div>
-              <h3 className="text-xl font-semibold mb-3">
-                Remplacement de serrure
-              </h3>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Remplacement de serrure</h3>
               <p className="text-slate-600">
-                Serrures standards, multipoints et haute sécurité certifiées.
+                Serrures standards, multipoints et haute sécurité.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
-              <div className="text-3xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold mb-3">
-                Sécurisation après effraction
-              </h3>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Sécurisation après effraction</h3>
               <p className="text-slate-600">
-                Mise en sécurité immédiate et conseils de protection.
+                Mise en sécurité immédiate du logement ou local.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* TARIFS */}
+      <section className="bg-white">
+        <div className="max-w-4xl mx-auto px-6 py-16">
+          <h2 className="text-2xl font-bold text-center mb-10">
+            Tarifs transparents
+          </h2>
+
+          <ul className="space-y-4 text-slate-700">
+            <li>🔑 Ouverture de porte claquée : <strong>à partir de 85 €</strong></li>
+            <li>🔐 Ouverture de porte verrouillée : <strong>à partir de 120 €</strong></li>
+            <li>🛠 Remplacement de serrure : <strong>sur devis gratuit</strong></li>
+            <li>🚨 Sécurisation après effraction : <strong>sur devis gratuit</strong></li>
+          </ul>
         </div>
       </section>
 
       {/* CTA FINAL */}
-      <section className="bg-slate-800 text-slate-50">
-        <div className="max-w-6xl mx-auto px-6 py-14 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            Besoin d’un serrurier immédiatement ?
-          </h2>
-          <p className="text-slate-200 mb-6">
-            Intervention rapide en Eure-et-Loir • 24h/24 – 7j/7
+      <section className="bg-[#0B2C4D] text-white">
+        <div className="max-w-6xl mx-auto px-6 py-12 text-center">
+          <p className="text-lg mb-4">
+            Besoin d’un serrurier maintenant ?
           </p>
           <a
             href="tel:0600000000"
-            className="inline-block bg-[#B87333] text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition"
+            className="inline-block bg-[#FF8A00] text-black font-bold px-8 py-3 rounded-md shadow hover:opacity-90 transition"
           >
-            📞 Appeler maintenant
+            📞 Appeler immédiatement
           </a>
         </div>
       </section>
