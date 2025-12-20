@@ -10,94 +10,113 @@ export default function HomePage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* COULEURS MAÎTRESSES */
+  const BLUE = "#0A1A2F";     // BLEU DU LOGO
+  const GOLD = "#b08a3c";     // DORÉ PREMIUM
+  const BG = "#f6f1e8";       // FOND CHAUD
+
   return (
-    <div className="pt-20 min-h-screen bg-[#f7f2e9] text-[#1c1c1c]">
+    <div className="pt-20 min-h-screen" style={{ backgroundColor: BG }}>
       {/* ================= HEADER ================= */}
       <header
         className={`fixed top-0 left-0 w-full z-50 px-6 ${
-          shrink ? "py-2 shadow-lg" : "py-3"
-        } flex items-center justify-between bg-[#0b1e33]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300`}
+          shrink ? "py-2 shadow-xl" : "py-3"
+        } flex items-center justify-between backdrop-blur-md transition-all duration-300`}
+        style={{ backgroundColor: `${BLUE}f2` }}
       >
-        <span className="text-lg font-semibold tracking-wide text-white">
+        <span className="text-white font-semibold tracking-wide text-lg">
           VSD Serrurerie
         </span>
 
         <nav className="hidden md:flex items-center gap-8 text-white/90 font-medium">
-          <a href="#services" className="hover:text-[#c9a24d] transition">
-            Dépannage
-          </a>
-          <a href="#tarifs" className="hover:text-[#c9a24d] transition">
-            Tarifs
-          </a>
-          <a href="#zones" className="hover:text-[#c9a24d] transition">
-            Zones
-          </a>
-          <a href="#contact" className="hover:text-[#c9a24d] transition">
-            Contact
-          </a>
+          {["Tarifs", "Zones", "Contact"].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[var(--gold)] hover:after:w-full after:transition-all"
+              style={{ ["--gold"]: GOLD }}
+            >
+              {item}
+            </a>
+          ))}
         </nav>
 
         <a
           href="tel:0652826311"
-          className="hidden md:inline-block bg-[#c9a24d] text-[#0b1e33] py-2 px-6 rounded-lg font-semibold shadow hover:opacity-90 transition"
+          className="hidden md:inline-block font-semibold py-2 px-6 rounded-lg shadow hover:scale-[1.03] transition"
+          style={{ backgroundColor: GOLD, color: BLUE }}
         >
           📞 06 52 82 63 11
         </a>
       </header>
 
       {/* ================= HERO ================= */}
-      <section className="relative px-6 pt-12 pb-20">
+      <section className="relative px-6 pt-16 pb-24">
         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1602080752272-5dfae6bd86c1')] bg-cover bg-center" />
 
-        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0b1e33] mb-6">
-              Serrurier à Chartres & Eure-et-Loir (28)
+        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          {/* TEXTE */}
+          <div className="animate-fadeInUp">
+            <h1
+              className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
+              style={{ color: BLUE }}
+            >
+              Serrurier à Chartres <br className="hidden md:block" />
+              & Eure-et-Loir (28)
             </h1>
+
             <p className="text-lg md:text-xl opacity-90 max-w-xl leading-relaxed">
-              Artisan serrurier diplômé et assuré décennale. Dépannage 24h/24 et
-              7j/7, ouverture sans dégâts, tarifs justes et transparents.
+              Artisan serrurier diplômé et assuré décennale. Intervention rapide,
+              ouverture sans dégâts, tarifs justes et transparents.
             </p>
 
             <a
               href="tel:0652826311"
-              className="inline-block mt-8 bg-[#c9a24d] text-[#0b1e33] py-3 px-8 rounded-xl shadow-lg hover:opacity-90 transition font-semibold"
+              className="inline-block mt-10 py-4 px-10 rounded-xl shadow-xl font-semibold hover:scale-[1.05] transition"
+              style={{ backgroundColor: GOLD, color: BLUE }}
             >
               📞 Appel immédiat
             </a>
           </div>
 
           {/* ================= ENGAGEMENTS ================= */}
-          <div className="bg-white/85 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-[#e2d7c5] flex gap-6 items-start">
-            {/* LOGO */}
-            <img
-              src="/logo-vsd.png"
-              alt="Logo VSD Serrurerie"
-              className="w-20 h-auto opacity-90"
-            />
-
+          <div className="bg-white/85 backdrop-blur-md shadow-2xl rounded-2xl p-8 border border-[#e1d6c2] flex flex-col md:flex-row gap-8 items-center hover:shadow-[0_20px_60px_rgba(0,0,0,0.15)] transition">
+            
             {/* TEXTE */}
-            <div>
-              <h3 className="text-2xl font-bold text-[#0b1e33] mb-4">
+            <div className="order-2 md:order-1">
+              <h3
+                className="text-2xl font-bold mb-4"
+                style={{ color: BLUE }}
+              >
                 Engagements VSD Serrurerie
               </h3>
-              <ul className="space-y-3 text-[#2a2a2a]">
+              <ul className="space-y-3 text-[#2b2b2b]">
                 <li>✔️ Artisan diplômé & assuré décennale</li>
-                <li>✔️ Devis gratuit & prix annoncés</li>
+                <li>✔️ Devis gratuit & tarifs annoncés</li>
                 <li>✔️ Règlement après prestation</li>
                 <li>✔️ Intervention en 30 minutes max</li>
                 <li>✔️ Disponible 24h/24 – 7j/7</li>
                 <li>✔️ Ouverture sans dégâts</li>
               </ul>
             </div>
+
+            {/* LOGO */}
+            <img
+              src="/logo-vsd.png"
+              alt="Logo VSD Serrurerie"
+              className="order-1 md:order-2 w-40 md:w-48 h-auto opacity-95 hover:scale-[1.05] transition"
+            />
           </div>
         </div>
       </section>
 
       {/* ================= TARIFS ================= */}
-      <section id="tarifs" className="py-16 bg-[#fff8ef] border-t">
+      <section id="tarifs" className="py-20 bg-[#fffaf2] border-t">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10 text-[#0b1e33]">
+          <h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            style={{ color: BLUE }}
+          >
             Tarifs serrurerie
           </h2>
 
@@ -107,18 +126,20 @@ export default function HomePage() {
               ["Ouverture porte blindée fermée à clés", "150€ – 210€"],
               ["Ouverture porte simple claquée", "110€ – 130€"],
               ["Ouverture porte blindée claquée", "150€ – 180€"],
-              ["Fourniture & pose serrure 1 point", "150€ – 290€"],
-              ["Fourniture & pose serrure 3 points", "290€ – 580€"],
-              ["Fourniture & pose serrure 5 points", "310€ – 690€"],
+              ["Serrure 1 point (fourniture + pose)", "150€ – 290€"],
+              ["Serrure 3 points (fourniture + pose)", "290€ – 580€"],
+              ["Serrure 5 points (fourniture + pose)", "310€ – 690€"],
               ["Serrure boîte aux lettres", "110€ – 140€"],
               ["Mise en sécurité après effraction", "Sur devis"],
             ].map(([name, price]) => (
               <div
                 key={name}
-                className="flex justify-between items-center bg-white rounded-xl p-5 shadow border"
+                className="flex justify-between items-center bg-white rounded-xl p-5 shadow hover:shadow-lg hover:-translate-y-1 transition border"
               >
                 <span className="font-medium">{name}</span>
-                <span className="font-bold text-[#c9a24d]">{price}</span>
+                <span className="font-bold" style={{ color: GOLD }}>
+                  {price}
+                </span>
               </div>
             ))}
           </div>
@@ -128,17 +149,19 @@ export default function HomePage() {
       {/* ================= CONTACT ================= */}
       <section
         id="contact"
-        className="bg-[#0b1e33] text-white py-16 text-center"
+        className="py-20 text-center"
+        style={{ backgroundColor: BLUE, color: "white" }}
       >
-        <h2 className="text-3xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
           🚨 Urgence serrurier – Intervention immédiate
         </h2>
-        <p className="opacity-80 max-w-2xl mx-auto mb-8">
-          Intervention rapide, sans surprise, par un artisan local de confiance.
+        <p className="opacity-85 max-w-2xl mx-auto mb-10">
+          Artisan local de confiance – aucune mauvaise surprise.
         </p>
         <a
           href="tel:0652826311"
-          className="bg-[#c9a24d] text-[#0b1e33] py-3 px-10 rounded-xl shadow-lg hover:opacity-90 transition inline-block font-semibold"
+          className="py-4 px-12 rounded-xl shadow-xl inline-block font-semibold hover:scale-[1.05] transition"
+          style={{ backgroundColor: GOLD, color: BLUE }}
         >
           📞 Appeler maintenant
         </a>
