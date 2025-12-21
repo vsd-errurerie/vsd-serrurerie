@@ -5,9 +5,7 @@ export const metadata = {
   description:
     "Artisan serrurier diplômé et assuré décennale. Dépannage serrurerie 24h/24 et 7j/7 à Chartres et dans tout le 28.",
   icons: {
-    icon: "/favicon.ico",
-    // ⚠️ Décommente seulement si tu as bien ce fichier dans /public
-    // apple: "/apple-touch-icon.png",
+    icon: "/favicon-v1.ico",
   },
 };
 
