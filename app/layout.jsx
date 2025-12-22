@@ -1,5 +1,4 @@
-"use client";
-import "./globals.css";
+import "../styles/globals.css";
 
 export const metadata = {
   title: {
