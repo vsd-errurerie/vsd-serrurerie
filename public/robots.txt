@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vsd-serrurerie-z9ie.vercel.app/sitemap.xml
