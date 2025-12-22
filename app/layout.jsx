@@ -2,15 +2,17 @@ import "../styles/globals.css";
 
 export const metadata = {
   title: {
-    default: "VSD Serrurerie – Serrurier à Chartres & Eure-et-Loir (28)",
+    default:
+      "Serrurier à Chartres & Eure-et-Loir (28) – Dépannage 24h/24 | VSD Serrurerie",
     template: "%s | VSD Serrurerie",
   },
   description:
-    "Artisan serrurier diplômé et assuré décennale. Dépannage serrurerie 24h/24 et 7j/7 : ouverture de porte sans dégâts, remplacement de serrure, sécurisation après effraction. Intervention rapide dans tout le 28.",
+    "VSD Serrurerie, artisan serrurier diplômé et assuré décennale à Chartres. Dépannage serrurerie 24h/24 et 7j/7 dans tout l’Eure-et-Loir (28) : ouverture de porte sans dégâts, tarifs annoncés, intervention rapide.",
   keywords: [
     "serrurier Chartres",
     "serrurier Eure-et-Loir",
-    "dépannage serrurerie 28",
+    "serrurier 28",
+    "dépannage serrurerie",
     "ouverture de porte",
     "serrurier urgence",
     "serrurier 24h/24",
