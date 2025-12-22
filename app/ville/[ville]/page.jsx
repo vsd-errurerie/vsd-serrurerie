@@ -5,7 +5,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `Serrurier à ${ville} (28) – Dépannage 24h/24 | VSD Serrurerie`,
-    description: `Besoin d’un serrurier à ${ville} ? VSD Serrurerie intervient en urgence 24h/24 et 7j/7 pour ouverture de porte, remplacement de serrure et sécurisation après effraction. Intervention rapide dans tout le 28.`,
+    description: `VSD Serrurerie intervient à ${ville} (28) pour tout dépannage serrurier : ouverture de porte, remplacement de serrure, sécurisation après effraction. Artisan diplômé, assuré décennale.`,
   };
 }
 
@@ -16,6 +16,7 @@ export default function PageVille({ params }) {
 
   return (
     <main className="bg-[#fbf7ef]">
+
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
@@ -24,19 +25,11 @@ export default function PageVille({ params }) {
           </h1>
 
           <p className="text-lg text-[#2e2e2e] max-w-xl mb-8">
-            VSD Serrurerie intervient à <strong>{ville}</strong> pour tout
-            dépannage serrurerie : ouverture de porte, remplacement de serrure,
-            sécurisation après effraction. Artisan diplômé, assuré décennale,
-            intervention rapide.
+            VSD Serrurerie intervient à <strong>{ville}</strong> et dans les
+            alentours pour tout dépannage serrurerie : ouverture de porte,
+            remplacement de serrure, sécurisation après effraction.
+            Artisan serrurier diplômé et assuré décennale.
           </p>
-
-          <ul className="space-y-3 text-[#1f2a44] mb-10">
-            <li>✔ Intervention en moins de 30 minutes</li>
-            <li>✔ Disponible 24h/24 et 7j/7</li>
-            <li>✔ Ouverture sans dégâts</li>
-            <li>✔ Tarifs annoncés à l’avance</li>
-            <li>✔ Règlement après prestation</li>
-          </ul>
 
           <a
             href="tel:0652826311"
@@ -44,31 +37,80 @@ export default function PageVille({ params }) {
           >
             📞 Appel immédiat – 06 52 82 63 11
           </a>
+
+          <p className="mt-4 text-sm text-[#555]">
+            Intervention rapide à {ville} – sans frais cachés
+          </p>
         </div>
 
-        {/* BLOC CONFIANCE */}
-        <div className="bg-white rounded-2xl shadow-xl p-10 border border-[#eee]">
-          <h2 className="text-2xl font-bold text-[#1f2a44] mb-6">
-            Pourquoi choisir VSD Serrurerie à {ville} ?
-          </h2>
+        {/* ENGAGEMENTS + LOGO */}
+        <div className="bg-white rounded-2xl shadow-xl p-10 border border-[#eee] grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <h2 className="text-2xl font-bold text-[#1f2a44] mb-6">
+              Engagements VSD Serrurerie
+            </h2>
+            <ul className="space-y-3 text-[#2e2e2e]">
+              <li>✔ Artisan diplômé & assuré décennale</li>
+              <li>✔ Devis gratuit – prix annoncés</li>
+              <li>✔ Règlement après prestation</li>
+              <li>✔ Intervention en 30 minutes max</li>
+              <li>✔ Disponible 24h/24 et 7j/7</li>
+              <li>✔ Ouverture sans dégâts</li>
+            </ul>
+          </div>
 
-          <ul className="space-y-4 text-[#2e2e2e]">
-            <li>✔ Artisan serrurier local intervenant dans le 28</li>
-            <li>✔ Aucune surfacturation liée à la distance</li>
-            <li>✔ Même tarif partout en Eure-et-Loir</li>
-            <li>✔ Méthodes professionnelles sans dégradation</li>
-            <li>✔ Devis clair avant intervention</li>
-          </ul>
+          <div className="flex justify-center">
+            <img
+              src="/logo-vsd.png"
+              alt="VSD Serrurerie"
+              className="w-40 h-auto"
+            />
+          </div>
         </div>
       </section>
 
-      {/* CTA BAS */}
+      {/* TARIFS */}
+      <section className="bg-white py-20 border-t">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-[#1f2a44] mb-12">
+            Tarifs serrurier à {ville}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              ["Ouverture porte simple fermée à clé", "130 – 150 €"],
+              ["Ouverture porte blindée fermée à clé", "150 – 210 €"],
+              ["Ouverture porte simple claquée", "110 – 130 €"],
+              ["Ouverture porte blindée claquée", "150 – 180 €"],
+              ["Serrure 1 point (fourniture + pose)", "150 – 290 €"],
+              ["Serrure 3 points (fourniture + pose)", "290 – 580 €"],
+              ["Serrure 5 points (fourniture + pose)", "310 – 690 €"],
+              ["Serrure boîte aux lettres", "110 – 140 €"],
+              ["Mise en sécurité après effraction", "Sur devis"],
+            ].map(([label, price]) => (
+              <div
+                key={label}
+                className="flex justify-between items-center bg-[#fbf7ef] p-5 rounded-xl shadow-sm border"
+              >
+                <span className="font-medium text-[#1f2a44]">{label}</span>
+                <span className="font-bold text-[#d4a856]">{price}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-sm text-[#555] mt-8">
+            Tarifs identiques dans toutes les villes de l’Eure-et-Loir (28)
+          </p>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
       <section className="bg-[#1f2a44] py-16 text-center text-white">
         <h2 className="text-3xl font-bold mb-4">
-          Serrurier disponible immédiatement à {ville}
+          Serrurier disponible à {ville} immédiatement
         </h2>
         <p className="mb-8 opacity-90">
-          Intervention rapide dans toute la commune et alentours.
+          Intervention rapide dans votre secteur, sans surcoût.
         </p>
         <a
           href="tel:0652826311"
