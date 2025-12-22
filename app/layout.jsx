@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../styles/globals.css";
 
 export const metadata = {
   title: {
@@ -18,16 +18,6 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-  },
-  metadataBase: new URL("https://www.vsd-serrurerie.fr"),
-  openGraph: {
-    title: "VSD Serrurerie – Serrurier à Chartres & Eure-et-Loir (28)",
-    description:
-      "Serrurier professionnel 24h/24 et 7j/7. Intervention rapide, tarifs annoncés, règlement après prestation.",
-    url: "https://www.vsd-serrurerie.fr",
-    siteName: "VSD Serrurerie",
-    locale: "fr_FR",
-    type: "website",
   },
 };
 
