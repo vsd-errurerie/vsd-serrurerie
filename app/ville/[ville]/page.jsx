@@ -61,7 +61,7 @@ export default function PageVille({ params }) {
 
           <div className="flex justify-center">
             <img
-              src="/logo-vsd.png"
+              src="/logo.png"
               alt="VSD Serrurerie"
               className="w-40 h-auto"
             />
