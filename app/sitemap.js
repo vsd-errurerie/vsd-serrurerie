@@ -1,58 +1,59 @@
 export default function sitemap() {
-  const baseUrl = "https://vsd-serrurerie-z9ie.vercel.app";
+  const baseUrl = "https://www.vsd-serrurerie.com";
 
-  const cities = [
-  "chartres",
-  "dreux",
-  "chateaudun",
-  "nogent-le-rotrou",
-  "luce",
-  "mainvilliers",
-  "vernouillet",
-  "leves",
-  "luisant",
-  "maintenon",
-  "epernon",
-  "courville-sur-eure",
-  "auneau-bleury-saint-symphorien",
-  "gallardon",
-  "bonneval",
-  "cloyes-les-trois-rivieres",
-  "les-villages-voveens",
-  "brou",
-  "illiers-combray",
-  "orgeres-en-beauce",
-  "senonches",
-  "anet",
-  "cherisy",
-  "janville-en-beauce",
-  "thiron-gardais",
-  "la-loupe",
-  "bailleau-le-pin",
-  "le-coudray",
-  "fontenay-sur-eure",
-  "barjouville",
-  "tremblay-les-villages",
-  "saint-georges-sur-eure",
-  "lormaye",
-  "aunay-sous-auneau",
-  "yevrem",
-  "gasville-oiseme",
-  "morancez",
-  "nogent-le-phaye",
-  "fresnay-le-comte",
-];
+  const villes = [
+    "chartres",
+    "dreux",
+    "chateaudun",
+    "nogent-le-rotrou",
+    "maintenon",
+    "luisant",
+    "lucé",
+    "epernon",
+    "auneau",
+    "courville-sur-eure",
+    "vernouillet",
+    "mainvilliers",
+    "senonches",
+    "bonneval",
+    "orgères-en-beauce",
+    "janville-en-beauce",
+    "voves",
+    "illiers-combray",
+    "brou",
+    "la-loupe",
+    "tremblay-les-villages",
+    "gasville-oiseme",
+    "saint-georges-sur-eure",
+    "fontenay-sur-eure",
+    "morancez",
+    "barjouville",
+    "le-coudray",
+    "lèves",
+    "berchères-les-pierres",
+    "pezy",
+    "bailleau-le-pin",
+    "frazé",
+    "thiron-gardais",
+    "authon-du-perche",
+    "unverre",
+    "cloyes-les-trois-rivières",
+    "arbouville",
+    "marboué",
+    "nottonville"
+  ];
 
-  const cityPages = cities.map((city) => ({
-    url: `${baseUrl}/ville/${city}`,
-    lastModified: new Date(),
-  }));
-
-  return [
+  const pages = [
     {
       url: baseUrl,
       lastModified: new Date(),
     },
-    ...cityPages,
   ];
+
+  const villePages = villes.map((ville) => ({
+    url: `${baseUrl}/serrurier-${ville}`,
+    lastModified: new Date(),
+  }));
+
+  return [...pages, ...villePages];
 }
